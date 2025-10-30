@@ -58,5 +58,4 @@ I feel ready to tackle more complex challenges using JSON and JS right now.
 
 ## Author
 
-- Website - [My Portfolio](https://portfolio.thisissocrates.com/)
 - Frontend Mentor - [@socratesioa](https://www.frontendmentor.io/profile/socratesioa)
