@@ -1,0 +1,224 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#modeToggle {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: $clr-light-mode-button;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+#modeToggle:hover {
+  background-color: $clr-light-mode-button-hover;
+}
+
+#modeToggle:focus-visible {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $clr-button-hover;
+}
+
+body.dark #modeToggle {
+  background-color: $clr-buttons-darker-background;
+}
+
+body.dark #modeToggle:hover {
+  background-color: $clr-buttons-dark-background;
+}
+
+body.dark #modeToggle:focus-visible {
+  box-shadow: 0 0 0 2px $clr-dark-background, 0 0 0 4px $clr-red-400;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-btn {
+  border-radius: 999px;
+  background-color: $clr-light-background;
+  @include text-preset(typo.$text-preset-3);
+  color: $clr-body-text-darker;
+  padding: 8px 20px 10px 20px;
+  cursor: pointer;
+  border: 1px solid $clr-light-border;
+  box-shadow: 0 1px 2px 0 hsla(217, 28%, 78%, 0.4);
+  outline: none;
+}
+
+body.dark .filter-btn {
+  background-color: $clr-buttons-darker-background;
+  border: 1px solid $clr-buttons-dark-background;
+  box-shadow: none;
+  color: $clr-body-text-lighter;
+}
+
+.filter-btn:hover {
+  opacity: 0.7;
+}
+
+body.dark .filter-btn:hover {
+  opacity: 1;
+  background-color: $clr-buttons-dark-background;
+  color: $clr-body-text-lighter;
+  border: 1px solid $clr-buttons-dark-background;
+}
+
+input[type="radio"]:checked + .filter-btn {
+  background-color: $clr-button-hover;
+  color: $clr-light-background;
+  @include text-preset(typo.$text-preset-4);
+  box-shadow: unset;
+  border: unset;
+}
+
+body.dark input[type="radio"]:checked + .filter-btn {
+  background-color: $clr-red-400;
+  color: $clr-body-text-darker;
+  box-shadow: unset;
+}
+
+input[type="radio"]:checked + .filter-btn:hover {
+  opacity: unset;
+  background-color: $clr-toggle-hover;
+  color: $clr-light-background;
+}
+
+body.dark input[type="radio"]:checked + .filter-btn:hover {
+  opacity: unset;
+  background-color: $clr-toggle-hover;
+  color: $clr-body-text-darker;
+}
+
+input[type="radio"]:focus-visible + .filter-btn {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $clr-button-hover;
+}
+
+body.dark input[type="radio"]:focus-visible + .filter-btn {
+  box-shadow: 0 0 0 2px $clr-body-text-darker, 0 0 0 4px $clr-red-400;
+}
+
+.toggle-container {
+  margin: 0;
+}
+
+.switch {
+  display: inline-flex;
+  width: 36px;
+  height: 20px;
+  position: relative;
+  align-self: center;
+}
+
+.switch input:focus-visible + .toggle {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $clr-button-hover;
+}
+
+body.dark .switch input:focus-visible + .toggle {
+  box-shadow: 0 0 0 2px $clr-dark-background, 0 0 0 4px $clr-red-400;
+}
+
+.toggle {
+  width: 36px;
+  height: 21px;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  border-radius: 9999px;
+  background-color: $clr-toggle-default-light;
+  transition: 0.2s;
+}
+
+body.dark .toggle {
+  background-color: $clr-buttons-dark-background;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $clr-light-background;
+  box-shadow: 0 1px 3px 0 hsla(220, 29%, 5%, 0.15),
+    0 1px 2px -1px hsla(220, 29%, 5%, 0.15);
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: 0.2s;
+}
+
+.toggle-container input:checked + .toggle {
+  background-color: $clr-button-hover;
+}
+
+body.dark .toggle-container input:checked + .toggle {
+  background-color: $clr-red-400;
+}
+
+.toggle-container input:checked + .toggle:hover {
+  background-color: $clr-toggle-hover;
+}
+
+body.dark .toggle-container input:checked + .toggle:hover {
+  background-color: $clr-toggle-hover;
+}
+
+.toggle-container input:checked + .toggle::before {
+  transform: translate(15px, -50%);
+}
+
+.removeBtn {
+  @include text-preset(typo.$text-preset-6);
+  background-color: $clr-light-background;
+  color: $clr-body-text-darker;
+  border-radius: 999px;
+  border: 1px solid $clr-remove-light-border;
+  box-shadow: 0 1px 2px 0 hsla(217, 28%, 78%, 0.4);
+  width: 91px;
+  height: 38px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+body.dark .removeBtn {
+  background-color: transparent;
+  color: $clr-body-text-lighter;
+  border: 1px solid $clr-buttons-dark-background;
+  box-shadow: none;
+}
+
+.removeBtn:hover {
+  background-color: $clr-button-hover;
+  color: $clr-light-background;
+}
+
+body.dark .removeBtn:hover {
+  background-color: $clr-red-400;
+  color: $clr-body-text-darker;
+  border: none;
+  box-shadow: none;
+}
+
+.removeBtn:focus-visible {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $clr-button-hover;
+  background-color: $clr-light-mode-button;
+  border: 1px solid $clr-light-background;
+}
+
+body.dark .removeBtn:focus-visible {
+  box-shadow: 0 0 0 2px $clr-body-text-darker, 0 0 0 4px $clr-red-400;
+  background-color: $clr-buttons-dark-background;
+  border: none;
+}

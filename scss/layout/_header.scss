@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+header {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $clr-light-background;
+  border-radius: 10px;
+  border: 1px solid $clr-light-border;
+  box-shadow: 0 2px 3px 0 #d9e5f4;
+  color: $clr-body-text-darker;
+  @include respond(small, min) {
+    padding: 12px 16px;
+  }
+}
+
+body.dark header {
+  background-color: $clr-dark-background;
+  color: #ffffff;
+  border: none;
+  box-shadow: unset;
+}

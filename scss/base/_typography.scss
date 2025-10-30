@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font-body: "Noto Sans", sans-serif;
+
+$text-preset-1: (
+  family: $font-body,
+  size: 34px,
+  lineHeight: 1,
+  letterSpacing: -1px,
+  weight: 700,
+);
+
+$text-preset-2: (
+  family: $font-body,
+  size: 20px,
+  lineHeight: 1.2,
+  letterSpacing: -0.2px,
+  weight: 700,
+);
+
+$text-preset-3: (
+  family: $font-body,
+  size: 20px,
+  lineHeight: 1.4,
+  letterSpacing: -0.3px,
+  weight: 400,
+);
+
+$text-preset-4: (
+  family: $font-body,
+  size: 20px,
+  lineHeight: 1.4,
+  letterSpacing: -0.3px,
+  weight: 500,
+);
+
+$text-preset-5: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1.4,
+  letterSpacing: -0.5px,
+  weight: 400,
+);
+
+$text-preset-6: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1.4,
+  letterSpacing: -0.5px,
+  weight: 500,
+);
+
+h1 {
+  @include text-preset($text-preset-1);
+  color: $clr-body-text-darker;
+}
+
+body.dark h1 {
+  color: $clr-body-text-lighter;
+}
+
+h2 {
+  @include text-preset($text-preset-2);
+  color: $clr-body-text-darker;
+}
+
+body.dark h2 {
+  color: $clr-body-text-lighter;
+}
+
+body {
+  @include text-preset($text-preset-5);
+  color: $clr-body-text-dark;
+}

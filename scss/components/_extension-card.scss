@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.extension-card {
+  background-color: $clr-light-background;
+  border: 1px solid $clr-light-border;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px 0 hsla(217, 34%, 82%, 0.2),
+    0 1px 5px 1px hsla(217, 34%, 82%, 0.22);
+  padding: 20px;
+  display: grid;
+  gap: 24px;
+  height: 100%;
+  align-items: start;
+}
+
+body.dark .extension-card {
+  background-color: $clr-dark-background;
+  border: 1px solid $clr-buttons-dark-background;
+  box-shadow: none;
+  color: $clr-body-text-light;
+}
+
+.card-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.extension-details {
+  display: grid;
+  gap: 8px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

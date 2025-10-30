@@ -1,0 +1,35 @@
+// COLOR PALETTE
+$light-gradient: linear-gradient(to bottom, #ebf2fc, #eefbf9);
+$dark-gradient: linear-gradient(to bottom, #04091b, #091540);
+$red400: #f25c54;
+$red500: #de4840;
+$red700: #c7231a;
+$neutral0: #fbfdfe;
+$neutral100: #eeeeee;
+$neutral200: #d6e2f5;
+$neutral300: #c6c6c6;
+$neutral600: #535868;
+$neutral700: #2f364b;
+$neutral800: #202535;
+$neutral900: #091540;
+
+// SEMANTIC VALUES
+$clr-light-gradient: $light-gradient;
+$clr-dark-gradient: $dark-gradient;
+$clr-light-background: $neutral0;
+$clr-light-border: $neutral200;
+$clr-body-text-darker: $neutral900;
+$clr-body-text-dark: $neutral600;
+$clr-remove-light-border: $neutral300;
+$clr-button-hover: $red700;
+$clr-toggle-default-light: $neutral300;
+$clr-toggle-hover: $red500;
+$clr-light-mode-button: $neutral100;
+$clr-light-mode-button-hover: $neutral300;
+
+$clr-dark-background: $neutral800;
+$clr-buttons-darker-background: $neutral700;
+$clr-buttons-dark-background: $neutral600;
+$clr-red-400: $red400;
+$clr-body-text-lighter: $neutral0;
+$clr-body-text-light: $neutral300;
