@@ -31,12 +31,6 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-### Links
-
-- Solution URL: [Solution](https://github.com/socratesioa/browser-extensions-manager-ui)
-- Live Site URL: [Live Site](https://socratesioa.github.io/browser-extensions-manager-ui)
-
-## My process
 
 ### Built with
 
@@ -58,4 +52,4 @@ I feel ready to tackle more complex challenges using JSON and JS right now.
 
 ## Author
 
-- Frontend Mentor - [@socratesioa](https://www.frontendmentor.io/profile/socratesioa)
+- Frontend Mentor - [@Umarcss](https://www.frontendmentor.io/profile/Umarcss)
